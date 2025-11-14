@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leve Vida - Voe alto, Viva Leve!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .slogan {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .article-card h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info i {
+            color: #667eea;
+            width: 20px;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-media a {
+            color: #667eea;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #764ba2;
+        }
+
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .about-content {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .downloads-section {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .downloads-section p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Leve Vida</div>
+            <div class="slogan">Voe alto, Viva Leve!</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">INÍCIO</a></li>
+                    <li><a href="#artigos">ARTIGOS</a></li>
+                    <li><a href="#noticias">NOTÍCIAS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                    <li><a href="#sobre">SOBRE</a></li>
+                    <li><a href="#downloads">DOWNLOADS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero" id="inicio">
+        <h1>Bem-vindo ao Leve Vida</h1>
+        <p>Transforme seus sonhos de viagem em realidade sem pesar no bolso. Descubra dicas, promoções e roteiros incríveis!</p>
+    </div>
+
+    <div class="container">
+        <section id="artigos">
+            <h2>Artigos</h2>
+            <div class="articles-grid">
+                <div class="article-card">
+                    <h3>Economize Sempre: Tudo Sobre o Seguro Proteção de Preço</h3>
+                    <p>Você sabia que alguns cartões de crédito oferecem um benefício pouco conhecido que pode garantir reembolso se você encontrar o mesmo produto mais barato? O Seguro Proteção de Preço, disponível nos cartões Visa Gold e Mastercard Gold, permite que você solicite o reembolso da diferença de preço em até 30 dias após a compra. Para Mastercard, o valor mínimo é U$ 50 e para Visa é R$ 150. Uma ferramenta eficaz para garantir que você sempre pague o menor preço disponível!</p>
+                </div>
+                <div class="article-card">
+                    <h3>A Magia da Aurora Boreal: Um Espetáculo de Luzes no Céu</h3>
+                    <p>Conheça um dos fenômenos mais impressionantes da natureza e saiba como planejar sua viagem para vê-la.</p>
+                </div>
+                <div class="article-card">
+                    <h3>Acúmulo de Milhas: Transforme seus Pontos em Viagens Incríveis</h3>
+                    <p>Aprenda estratégias eficientes para acumular milhas e realizar as viagens dos seus sonhos gastando menos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="noticias">
+            <h2>Notícias</h2>
+            <div class="articles-grid">
+                <div class="article-card">
+                    <h3>Em breve</h3>
+                    <p>Fique ligado! Em breve teremos as melhores notícias sobre viagens, promoções e dicas para você viajar mais e gastar menos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Jardim Aclimação, Cuiabá - MT, Brasil</p>
+                <p><i class="fas fa-phone"></i> +55-999-7777-000</p>
+                <p><i class="fas fa-envelope"></i> equipelevevida@gmail.com</p>
+                
+                <div class="social-media">
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Kwai"><i class="fas fa-video"></i></a>
+                    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h3 style="margin-bottom: 1.5rem; color: #667eea;">FALE CONOSCO</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">FALE CONOSCO</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <div class="about-content">
+                <p>Leve Vida nasceu de uma história de amor e saudade que cruzava cidades e a nossa própria vontade de estar juntos. Em Cuiabá, encontrei Cleide Lúcia — hoje minha esposa, parceira de aventuras e mãe do nosso filho — que havia deixado Montes Claros para seguir um sonho profissional.</p>
+                
+                <p>A cada reencontro com a família dela, dos pais aos amigos de infância, embarcávamos numa verdadeira maratona atrás de passagens com preço justo, mas os valores altos sempre pareciam nos deixar sem fôlego. Foi dessa vontade de viajar com leveza que surgiu o Leve Vida.</p>
+                
+                <p>Aqui, exploramos truques, promoções e roteiros acessíveis para transformar seus planos de viagem em experiências inesquecíveis, sem pesar no bolso. Porque, afinal, amar e viajar combinam: quanto mais leve o bolso, mais alto podemos voar. Voe Alto, Viva Leve!</p>
+            </div>
+        </section>
+
+        <section id="downloads">
+            <h2>Downloads</h2>
+            <div class="downloads-section">
+                <p>Em breve disponibilizaremos materiais exclusivos para download!</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Leve Vida - Todos os direitos reservados</p>
+        <p>Voe alto, Viva Leve!</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado pela sua mensagem! Entraremos em contato em breve.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

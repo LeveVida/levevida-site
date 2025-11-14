@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags (serão atualizados dinamicamente) -->
+    <meta name="description" content="Guia de viagem completo - Leve Vida">
+    <meta name="keywords" content="viagem, turismo, guia, dicas">
+    <meta name="author" content="Leve Vida">
+    
+    <title>Guia de Viagem | Leve Vida</title>
+    
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Estilos específicos para guias */
+        .guide-header {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            margin-top: 80px;
+            text-align: center;
+        }
+        
+        .guide-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .guide-hero-content h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .guide-hero-content .subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .guide-meta {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .guide-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .guide-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .guide-section {
+            margin: 4rem 0;
+        }
+        
+        .section-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .beach-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .beach-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .beach-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .beach-card-content {
+            padding: 2rem;
+        }
+        
+        .beach-card h3 {
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border-left: 5px solid #4caf50;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 5px solid #ff9800;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #2196f3;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .table-responsive {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        .guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .guide-table thead {
+            background: var(--gradient-primary);
+            color: white;
+        }
+        
+        .guide-table th,
+        .guide-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .guide-table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .activity-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .cuisine-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .cuisine-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .cuisine-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .cuisine-content {
+            padding: 1.5rem;
+        }
+        
+        .budget-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .budget-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .budget-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+        
+        @media (max-width: 768px) {
+            .guide-image {
+                height: 250px;
+            }
+            
+            .beach-card img {
+                height: 200px;
+            }
+            
+            .guide-table th,
+            .guide-table td {
+                padding: 0.7rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">Leve Vida</a>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+                    <li><a href="artigos.html" class="nav-link">ARTIGOS</a></li>
+                    <li><a href="e-book.html" class="nav-link">E-BOOK</a></li>
+                    <li><a href="guias.html" class="nav-link active">GUIAS</a></li>
+                    <li><a href="downloads.html" class="nav-link">DOWNLOADS</a></li>
+                    <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- CONTEÚDO DO GUIA (Carregado dinamicamente via JavaScript) -->
+    <div id="guia-content">
+        <!-- Loading -->
+        <div class="container" style="margin-top: 150px; text-align: center;">
+            <div style="display: inline-block; width: 60px; height: 60px; border: 5px solid #f3f3f3; border-top: 5px solid var(--color-primary); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+            <p style="margin-top: 1rem; color: #666;">Carregando guia...</p>
+        </div>
+    </div>
+    
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre o Leve Vida</h3>
+                <p>
+                    Ajudamos você a realizar seus sonhos de viagem sem pesar no bolso. 
+                    Dicas, estratégias e muito conteúdo de qualidade.
+                </p>
+                <div class="social-media">
+                    <a href="#" class="social-link" title="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Kwai" aria-label="Kwai">
+                        <i class="fas fa-video"></i>
+                    </a>
+                    <a href="#" class="social-link" title="TikTok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-link" title="YouTube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="artigos.html">Artigos</a>
+                    <a href="e-book.html">E-book</a>
+                    <a href="guias.html">Guias</a>
+                    <a href="downloads.html">Downloads</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jardim Aclimaação, Cuiabá - MT</p>
+                <p><i class="fas fa-phone"></i> +55 (65) 99977-7000</p>
+                <p><i class="fas fa-envelope"></i> equipelevevida@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Leve Vida - Todos os direitos reservados</p>
+            <p>Voe alto, Viva Leve! ✈️</p>
+        </div>
+    </footer>
+    
+    <!-- SCRIPTS -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/guias.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+{
+  "_comentario": "TEMPLATE PARA NOVOS GUIAS - Preencha os campos abaixo",
+  
+  "id": "nome-do-destino",
+  "titulo": "Nome do Destino - Slogan",
+  "subtitulo": "Descrição curta do destino",
+  "descricao": "Descrição para o card na listagem (2-3 linhas)",
+  "destaque": false,
+  
+  "meta": {
+    "duracao": "X-Y dias",
+    "orcamento": "R$ X.XXX",
+    "clima": "XX-XX°C",
+    "voos": "Voos diretos / Com conexão"
+  },
+  
+  "icone": "fa-umbrella-beach",
+  "cor": "#667eea",
+  "imagem_capa": "URL_da_imagem_de_capa",
+  "tags": ["tag1", "tag2", "tag3"],
+  
+  "secoes": [
+    {
+      "_exemplo": "SEÇÃO DE TEXTO",
+      "id": "introducao",
+      "tipo": "texto",
+      "titulo": "Título da Seção",
+      "icone": "fa-info-circle",
+      "conteudo": "Texto da seção aqui...",
+      "imagem": "URL_opcional"
+    },
+    {
+      "_exemplo": "SEÇÃO DE CARDS (Praias, Atrações)",
+      "id": "praias",
+      "tipo": "cards",
+      "titulo": "Título da Seção",
+      "icone": "fa-umbrella-beach",
+      "items": [
+        {
+          "titulo": "Nome do Item",
+          "emoji": "🏖️",
+          "descricao": "Descrição do item...",
+          "imagem": "URL_da_imagem",
+          "destaque": ["Destaque 1", "Destaque 2", "Destaque 3"]
+        }
+      ]
+    },
+    {
+      "_exemplo": "SEÇÃO DE TABELA",
+      "id": "comparativo",
+      "tipo": "tabela",
+      "titulo": "Título da Tabela",
+      "icone": "fa-table",
+      "colunas": ["Coluna 1", "Coluna 2", "Coluna 3"],
+      "linhas": [
+        ["Valor 1A", "Valor 1B", "Valor 1C"],
+        ["Valor 2A", "Valor 2B", "Valor 2C"]
+      ]
+    },
+    {
+      "_exemplo": "SEÇÃO DE LISTA (Pontos Turísticos)",
+      "id": "pontos",
+      "tipo": "lista",
+      "titulo": "Pontos Turísticos",
+      "icone": "fa-map-marked-alt",
+      "items": [
+        {
+          "titulo": "Nome do Ponto",
+          "tipo": "Categoria",
+          "descricao": "Descrição do ponto turístico...",
+          "dica": "Dica opcional para os visitantes"
+        }
+      ]
+    },
+    {
+      "_exemplo": "SEÇÃO DE GASTRONOMIA",
+      "id": "gastronomia",
+      "tipo": "gastronomia",
+      "titulo": "O que Comer",
+      "icone": "fa-utensils",
+      "items": [
+        {
+          "nome": "Nome do Prato",
+          "emoji": "🍽️",
+          "descricao": "Descrição do prato...",
+          "onde": "Onde encontrar",
+          "preco": "R$ XX-YY",
+          "imagem": "URL_da_imagem"
+        }
+      ]
+    },
+    {
+      "_exemplo": "SEÇÃO DE ORÇAMENTO",
+      "id": "orcamento",
+      "tipo": "orcamento",
+      "titulo": "Quanto Custa?",
+      "icone": "fa-money-bill-wave",
+      "opcoes": [
+        {
+          "nivel": "Econômico",
+          "cor": "#4caf50",
+          "total": "R$ X.XXX",
+          "items": [
+            {"item": "Passagem Aérea", "valor": "R$ XXX"},
+            {"item": "Hospedagem (7 noites)", "valor": "R$ XXX"},
+            {"item": "Alimentação", "valor": "R$ XXX"},
+            {"item": "Transporte Local", "valor": "R$ XXX"},
+            {"item": "Passeios", "valor": "R$ XXX"},
+            {"item": "Extras", "valor": "R$ XXX"}
+          ]
+        },
+        {
+          "nivel": "Médio",
+          "cor": "#667eea",
+          "total": "R$ X.XXX",
+          "items": [
+            {"item": "Passagem Aérea", "valor": "R$ XXX"},
+            {"item": "Hospedagem (7 noites)", "valor": "R$ XXX"},
+            {"item": "Alimentação", "valor": "R$ XXX"},
+            {"item": "Transporte Local", "valor": "R$ XXX"},
+            {"item": "Passeios", "valor": "R$ XXX"},
+            {"item": "Extras", "valor": "R$ XXX"}
+          ]
+        },
+        {
+          "nivel": "Confortável",
+          "cor": "#9c27b0",
+          "total": "R$ X.XXX+",
+          "items": [
+            {"item": "Passagem Aérea", "valor": "R$ XXX"},
+            {"item": "Hospedagem (7 noites)", "valor": "R$ XXX"},
+            {"item": "Alimentação", "valor": "R$ XXX"},
+            {"item": "Transporte Local", "valor": "R$ XXX"},
+            {"item": "Passeios", "valor": "R$ XXX"},
+            {"item": "Extras", "valor": "R$ XXX"}
+          ]
+        }
+      ]
+    },
+    {
+      "_exemplo": "SEÇÃO DE DICAS",
+      "id": "dicas",
+      "tipo": "dicas",
+      "titulo": "Dicas Práticas",
+      "icone": "fa-lightbulb",
+      "items": [
+        {
+          "tipo": "info",
+          "titulo": "Título da Dica",
+          "icone": "fa-info-circle",
+          "conteudo": "Conteúdo da dica informativa..."
+        },
+        {
+          "tipo": "warning",
+          "titulo": "Título do Aviso",
+          "icone": "fa-exclamation-triangle",
+          "conteudo": "Conteúdo do aviso importante..."
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Título da Dica",
+          "icone": "fa-lightbulb",
+          "conteudo": "Conteúdo da dica útil..."
+        }
+      ]
+    }
+  ],
+  
+  "download_materiais": [
+    {
+      "titulo": "Nome do Material",
+      "descricao": "Descrição do que contém",
+      "icone": "fa-file-pdf",
+      "arquivo": "nome-arquivo.pdf"
+    }
+  ]
+}

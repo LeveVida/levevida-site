@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- ============================================
+         META TAGS E CONFIGURAÇÕES BÁSICAS
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Guias práticos de viagem - Roteiros, dicas de destinos e planejamento. Leve Vida - Voe alto, Viva Leve!">
+    <meta name="keywords" content="guias de viagem, roteiros, destinos turísticos, planejamento de viagem">
+    <meta name="author" content="Leve Vida">
+    
+    <title>Guias Práticos - Leve Vida | Roteiros e Dicas de Destinos</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- ============================================
+         HEADER E NAVEGAÇÃO
+         ============================================ -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" class="logo-text">Leve Vida</a>
+            </div>
+            
+            <!-- Menu de Navegação -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+                    <li><a href="artigos.html" class="nav-link">ARTIGOS</a></li>
+                    <li><a href="e-book.html" class="nav-link">E-BOOK</a></li>
+                    <li><a href="guias.html" class="nav-link active">GUIAS</a></li>
+                    <li><a href="downloads.html" class="nav-link">DOWNLOADS</a></li>
+                    <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Botão Hamburger (Mobile) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Guias Práticos</h1>
+            <p>Roteiros completos e dicas específicas para cada destino</p>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         CONTAINER PRINCIPAL
+         ============================================ -->
+    <div class="container">
+        
+        <!-- ============================================
+             GUIAS DE DESTINOS (SISTEMA DINÂMICO)
+             ============================================ -->
+        <section id="guias-destinos">
+            <h2 class="section-title">Guias de Destinos</h2>
+            <p class="section-subtitle">Explore nossos roteiros detalhados para os melhores destinos</p>
+            
+            <!-- Cards carregados dinamicamente via JavaScript -->
+            <div class="cards-grid" id="guias-container">
+                <!-- Loading -->
+                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                    <div style="display: inline-block; width: 50px; height: 50px; border: 4px solid #f3f3f3; border-top: 4px solid var(--color-primary); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                    <p style="margin-top: 1rem; color: #666;">Carregando guias...</p>
+                </div>
+            </div>
+            
+            <style>
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+            </style>
+        </section>
+        
+        <!-- ============================================
+             GUIAS TEMÁTICOS
+             ============================================ -->
+        <section id="guias-tematicos" class="mt-3">
+            <h2 class="section-title">Guias Temáticos</h2>
+            <p class="section-subtitle">Dicas específicas para cada tipo de viajante</p>
+            
+            <div class="cards-grid">
+                
+                <!-- Guia Temático 1 -->
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="card-title">Lua de Mel Econômica</h3>
+                    <p class="card-description">
+                        Destinos românticos que cabem no orçamento. Celebre seu amor sem comprometer 
+                        as finanças do casal.
+                    </p>
+                    <a href="#" class="card-link">
+                        Em breve <i class="fas fa-clock"></i>
+                    </a>
+                </article>
+                
+                <!-- Guia Temático 2 -->
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="card-title">Viagem em Família</h3>
+                    <p class="card-description">
+                        Destinos e dicas para viajar com crianças. Diversão garantida para toda a 
+                        família sem gastar muito.
+                    </p>
+                    <a href="#" class="card-link">
+                        Em breve <i class="fas fa-clock"></i>
+                    </a>
+                </article>
+                
+                <!-- Guia Temático 3 -->
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <h3 class="card-title">Ecoturismo e Aventura</h3>
+                    <p class="card-description">
+                        Para os amantes da natureza e aventura. Trilhas, cachoeiras e paisagens 
+                        de tirar o fôlego.
+                    </p>
+                    <a href="#" class="card-link">
+                        Em breve <i class="fas fa-clock"></i>
+                    </a>
+                </article>
+                
+                <!-- Guia Temático 4 -->
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="card-title">Roteiros Fotográficos</h3>
+                    <p class="card-description">
+                        Os lugares mais instagramáveis e fotogênicos do mundo. Capture momentos 
+                        inesquecíveis!
+                    </p>
+                    <a href="#" class="card-link">
+                        Em breve <i class="fas fa-clock"></i>
+                    </a>
+                </article>
+                
+                <!-- Guia Temático 5 -->
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-backpack"></i>
+                    </div>
+                    <h3 class="card-title">Mochilão Econômico</h3>
+                    <p class="card-description">
+                        Guia completo para quem quer viajar com pouco dinheiro e muita aventura. 
+                        Ideal para jovens viajantes.
+                    </p>
+                    <a href="#" class="card-link">
+                        Em breve <i class="fas fa-clock"></i>
+                    </a>
+                </article>
+                
+                <!-- Guia Temático 6 -->
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
+                    <h3 class="card-title">Turismo Gastronômico</h3>
+                    <p class="card-description">
+                        Descubra os melhores destinos para experimentar culinárias do mundo todo 
+                        sem estourar o orçamento.
+                    </p>
+                    <a href="#" class="card-link">
+                        Em breve <i class="fas fa-clock"></i>
+                    </a>
+                </article>
+                
+            </div>
+        </section>
+        
+        <!-- ============================================
+             CALL TO ACTION
+             ============================================ -->
+        <section id="cta-guias" class="mt-3">
+            <div class="newsletter">
+                <h3>Quer receber nossos guias primeiro?</h3>
+                <p>Cadastre-se para ser notificado quando lançarmos novos guias e roteiros!</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input 
+                        type="email" 
+                        id="newsletter-email" 
+                        class="newsletter-input" 
+                        placeholder="Seu melhor e-mail"
+                        required
+                    >
+                    <button type="submit" class="newsletter-btn">Quero ser notificado</button>
+                </form>
+            </div>
+        </section>
+        
+    </div>
+    
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Sobre -->
+            <div class="footer-section">
+                <h3>Sobre o Leve Vida</h3>
+                <p>
+                    Ajudamos você a realizar seus sonhos de viagem sem pesar no bolso. 
+                    Dicas, estratégias e muito conteúdo de qualidade.
+                </p>
+                <div class="social-media">
+                    <a href="#" class="social-link" title="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Kwai" aria-label="Kwai">
+                        <i class="fas fa-video"></i>
+                    </a>
+                    <a href="#" class="social-link" title="TikTok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-link" title="YouTube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Links Rápidos -->
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="artigos.html">Artigos</a>
+                    <a href="e-book.html">E-book</a>
+                    <a href="guias.html">Guias</a>
+                    <a href="downloads.html">Downloads</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+            </div>
+            
+            <!-- Contato -->
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jardim Aclimação, Cuiabá - MT</p>
+                <p><i class="fas fa-phone"></i> +55 (65) 99977-7000</p>
+                <p><i class="fas fa-envelope"></i> equipelevevida@gmail.com</p>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Leve Vida - Todos os direitos reservados</p>
+            <p>Voe alto, Viva Leve! ✈️</p>
+        </div>
+    </footer>
+    
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/guias.js"></script>
+</body>
+</html>

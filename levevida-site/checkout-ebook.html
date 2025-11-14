@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Finalizar compra do E-book ROTA DAS MILHAS: Pague Menos, Voe Mais">
+    <meta name="keywords" content="e-book milhas, comprar, checkout, pagamento, milhas aéreas">
+    <meta name="author" content="Leve Vida">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>Checkout - ROTA DAS MILHAS | Pagamento Seguro</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .checkout-container {
+            max-width: 1000px;
+            margin: 120px auto 4rem;
+            padding: 0 2rem;
+        }
+        
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .checkout-header h1 {
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+        }
+        
+        .product-details {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 2rem;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .product-title {
+            font-size: 1.8rem;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .product-description {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        
+        .benefits-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .benefits-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .order-summary {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .summary-title {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .price-label {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .price-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .price-old {
+            text-decoration: line-through;
+            color: #999;
+        }
+        
+        .discount-badge {
+            background: #ff4757;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+        }
+        
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin-top: 1rem;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .total-label {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--color-text-dark);
+        }
+        
+        .total-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+        
+        .payment-button {
+            width: 100%;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 1.3rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .payment-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+        
+        .security-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .security-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .security-item i {
+            color: #4caf50;
+            font-size: 1.2rem;
+        }
+        
+        .guarantee-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border-left: 5px solid #4caf50;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .guarantee-box h4 {
+            color: #2e7d32;
+            margin-bottom: 0.5rem;
+        }
+        
+        .guarantee-box p {
+            color: #2e7d32;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .payment-method-icon {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .payment-method-icon i {
+            font-size: 2rem;
+            color: var(--color-primary);
+        }
+        
+        .payment-method-icon span {
+            display: block;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .checkout-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .order-summary {
+                position: relative;
+                top: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .checkout-container {
+                margin-top: 100px;
+            }
+            
+            .checkout-header h1 {
+                font-size: 2rem;
+            }
+            
+            .payment-methods {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">Leve Vida</a>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+                    <li><a href="artigos.html" class="nav-link">ARTIGOS</a></li>
+                    <li><a href="e-book.html" class="nav-link active">E-BOOK</a></li>
+                    <li><a href="guias.html" class="nav-link">GUIAS</a></li>
+                    <li><a href="downloads.html" class="nav-link">DOWNLOADS</a></li>
+                    <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- CHECKOUT CONTENT -->
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h1><i class="fas fa-lock"></i> Checkout Seguro</h1>
+            <p style="color: #666; font-size: 1.1rem;">Complete sua compra em ambiente 100% seguro</p>
+        </div>
+        
+        <div class="checkout-grid">
+            <!-- Detalhes do Produto -->
+            <div class="product-details">
+                <img src="https://via.placeholder.com/300x400/667eea/ffffff?text=ROTA+DAS+MILHAS" 
+                     alt="Capa do E-book ROTA DAS MILHAS" 
+                     class="product-image"
+                     onerror="this.src='assets/images/ebook-capa.jpg'">
+                
+                <h2 class="product-title">ROTA DAS MILHAS: Pague Menos, Voe Mais</h2>
+                
+                <p class="product-description">
+                    Descubra os segredos do acúmulo estratégico de milhas! Este e-book completo 
+                    ensina você a acumular milhares de milhas sem gastar muito, transformando seus 
+                    gastos do dia a dia em passagens aéreas gratuitas. Aprenda as melhores estratégias, 
+                    descubra programas de fidelidade lucrativos e viaje o mundo pagando muito menos!
+                </p>
+                
+                <h3 style="color: var(--color-primary); margin: 2rem 0 1rem;">
+                    <i class="fas fa-gift"></i> O que você vai receber:
+                </h3>
+                
+                <ul class="benefits-list">
+                    <li>📘 E-book completo em PDF (150+ páginas)</li>
+                    <li>✈️ Guia completo de programas de milhas (LATAM, Azul, Gol, Smiles)</li>
+                    <li>💳 Estratégias avançadas com cartões de crédito</li>
+                    <li>🎯 Como acumular 100 mil milhas em 6 meses</li>
+                    <li>🔄 Transferência entre programas de fidelidade</li>
+                    <li>📊 Planilhas de controle de milhas</li>
+                    <li>🎁 Bônus: Calculadora de milhas necessárias</li>
+                    <li>🆕 Atualizações gratuitas para sempre</li>
+                </ul>
+                
+                <div class="guarantee-box">
+                    <h4><i class="fas fa-shield-alt"></i> Garantia de 7 Dias</h4>
+                    <p>
+                        Se você não gostar do conteúdo, devolvemos 100% do seu dinheiro. 
+                        Sem perguntas, sem burocracia!
+                    </p>
+                </div>
+                
+                <h3 style="color: var(--color-primary); margin: 2rem 0 1rem;">
+                    <i class="fas fa-credit-card"></i> Formas de Pagamento:
+                </h3>
+                
+                <div class="payment-methods">
+                    <div class="payment-method-icon">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Cartão de Crédito</span>
+                    </div>
+                    <div class="payment-method-icon">
+                        <i class="fas fa-barcode"></i>
+                        <span>Boleto</span>
+                    </div>
+                    <div class="payment-method-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Pix</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resumo do Pedido -->
+            <div class="order-summary">
+                <h2 class="summary-title"><i class="fas fa-shopping-cart"></i> Resumo do Pedido</h2>
+                
+                <div class="price-row">
+                    <span class="price-label">ROTA DAS MILHAS</span>
+                    <span class="price-value price-old">R$ 97,00</span>
+                </div>
+                
+                <div class="price-row">
+                    <span class="price-label">
+                        Desconto Especial
+                        <span class="discount-badge">52% OFF</span>
+                    </span>
+                    <span class="price-value" style="color: #4caf50;">- R$ 50,00</span>
+                </div>
+                
+                <div class="total-row">
+                    <span class="total-label">Total</span>
+                    <span class="total-value">R$ 47,00</span>
+                </div>
+                
+                <a href="https://mpago.la/2Zbmgga" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="payment-button">
+                    <i class="fas fa-lock"></i> Finalizar Compra Segura
+                </a>
+                
+                <p style="text-align: center; color: #999; font-size: 0.85rem; margin-top: 1rem;">
+                    Você será redirecionado para o Mercado Pago
+                </p>
+                
+                <div class="security-badges">
+                    <div class="security-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Pagamento 100% Seguro via Mercado Pago</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-lock"></i>
+                        <span>Conexão criptografada SSL</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-download"></i>
+                        <span>Download imediato após pagamento</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Link enviado por e-mail</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Rápido -->
+        <div style="margin-top: 4rem;">
+            <h2 style="text-align: center; color: var(--color-primary); margin-bottom: 2rem;">
+                Dúvidas Frequentes
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="card">
+                    <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">
+                        <i class="fas fa-question-circle"></i> Como recebo o e-book?
+                    </h4>
+                    <p style="margin: 0; color: #666;">
+                        Após a confirmação do pagamento, você receberá o link para download 
+                        imediatamente no e-mail cadastrado.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">
+                        <i class="fas fa-question-circle"></i> Posso parcelar?
+                    </h4>
+                    <p style="margin: 0; color: #666;">
+                        Sim! O Mercado Pago permite parcelamento em até 12x no cartão de crédito.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">
+                        <i class="fas fa-question-circle"></i> E se eu não gostar?
+                    </h4>
+                    <p style="margin: 0; color: #666;">
+                        Oferecemos garantia de 7 dias. Se não gostar, devolvemos 100% do seu dinheiro!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre o Leve Vida</h3>
+                <p>
+                    Ajudamos você a realizar seus sonhos de viagem sem pesar no bolso. 
+                    Dicas, estratégias e muito conteúdo de qualidade.
+                </p>
+                <div class="social-media">
+                    <a href="#" class="social-link" title="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Kwai" aria-label="Kwai">
+                        <i class="fas fa-video"></i>
+                    </a>
+                    <a href="#" class="social-link" title="TikTok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-link" title="YouTube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="artigos.html">Artigos</a>
+                    <a href="e-book.html">E-book</a>
+                    <a href="guias.html">Guias</a>
+                    <a href="downloads.html">Downloads</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jardim Aclimaação, Cuiabá - MT</p>
+                <p><i class="fas fa-phone"></i> +55 (65) 99977-7000</p>
+                <p><i class="fas fa-envelope"></i> equipelevevida@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Leve Vida - Todos os direitos reservados</p>
+            <p>Voe alto, Viva Leve! ✈️</p>
+        </div>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

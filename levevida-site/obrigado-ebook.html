@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Obrigado por sua compra! Instruções para acessar seu e-book Leve Vida">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>Obrigado! Sua Compra foi Confirmada | ROTA DAS MILHAS</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .thank-you-container {
+            max-width: 800px;
+            margin: 120px auto 4rem;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.5s ease;
+        }
+        
+        .success-icon i {
+            font-size: 3rem;
+            color: white;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .thank-you-title {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .thank-you-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .info-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .step-list {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+        
+        .step-list li {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-primary);
+            position: relative;
+            padding-left: 4rem;
+        }
+        
+        .step-list li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 5px solid #ff9800;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .warning-box h4 {
+            color: #e65100;
+            margin-bottom: 0.5rem;
+        }
+        
+        .warning-box p {
+            color: #e65100;
+            margin: 0;
+        }
+        
+        .support-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+        
+        .support-box h3 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+        
+        .support-box p {
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: white;
+            color: var(--color-primary);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .next-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .next-step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .next-step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        
+        .next-step-card i {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .next-step-card h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .next-step-card a {
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-container {
+                margin-top: 100px;
+            }
+            
+            .thank-you-title {
+                font-size: 2rem;
+            }
+            
+            .step-list li {
+                padding-left: 3.5rem;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+            }
+            
+            .contact-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">Leve Vida</a>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+                    <li><a href="artigos.html" class="nav-link">ARTIGOS</a></li>
+                    <li><a href="e-book.html" class="nav-link">E-BOOK</a></li>
+                    <li><a href="guias.html" class="nav-link">GUIAS</a></li>
+                    <li><a href="downloads.html" class="nav-link">DOWNLOADS</a></li>
+                    <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- THANK YOU CONTENT -->
+    <div class="thank-you-container">
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        
+        <h1 class="thank-you-title">🎉 Parabéns! Compra Confirmada!</h1>
+        <p class="thank-you-subtitle">
+            Seu e-book "ROTA DAS MILHAS: Pague Menos, Voe Mais" está pronto para download
+        </p>
+        
+        <!-- Instruções de Acesso -->
+        <div class="info-card">
+            <h3><i class="fas fa-download"></i> Como Acessar Seu E-book</h3>
+            
+            <ol class="step-list">
+                <li>
+                    <strong>Verifique seu e-mail</strong><br>
+                    Enviamos o link de download para o e-mail cadastrado na compra. 
+                    Chegará em até 5 minutos.
+                </li>
+                
+                <li>
+                    <strong>Confira a caixa de spam</strong><br>
+                    Às vezes o e-mail pode cair na pasta de spam ou promoções. 
+                    Procure por "Leve Vida" ou "E-book".
+                </li>
+                
+                <li>
+                    <strong>Clique no link de download</strong><br>
+                    O e-mail contém um link seguro para baixar seu e-book em formato PDF.
+                </li>
+                
+                <li>
+                    <strong>Salve o arquivo</strong><br>
+                    Recomendamos salvar o e-book em seu computador, celular ou cloud 
+                    (Google Drive, Dropbox) para acesso offline.
+                </li>
+            </ol>
+        </div>
+        
+        <!-- Aviso Importante -->
+        <div class="warning-box">
+            <h4><i class="fas fa-exclamation-triangle"></i> Importante!</h4>
+            <p>
+                <strong>Não recebeu o e-mail?</strong> Entre em contato conosco imediatamente 
+                pelo WhatsApp ou e-mail. Responderemos em poucos minutos!
+            </p>
+        </div>
+        
+        <!-- O que você pode fazer com o e-book -->
+        <div class="info-card">
+            <h3><i class="fas fa-book-open"></i> O que você pode fazer com seu e-book</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="text-align: left; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                    <i class="fas fa-mobile-alt" style="color: var(--color-primary); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                    <h4 style="color: var(--color-secondary); margin-bottom: 0.5rem;">Leia no Celular</h4>
+                    <p style="margin: 0; color: #666; font-size: 0.95rem;">
+                        Abra o PDF em qualquer app de leitura no Android ou iOS
+                    </p>
+                </div>
+                
+                <div style="text-align: left; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                    <i class="fas fa-laptop" style="color: var(--color-primary); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                    <h4 style="color: var(--color-secondary); margin-bottom: 0.5rem;">Leia no Computador</h4>
+                    <p style="margin: 0; color: #666; font-size: 0.95rem;">
+                        Use o Adobe Reader ou qualquer leitor de PDF
+                    </p>
+                </div>
+                
+                <div style="text-align: left; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                    <i class="fas fa-print" style="color: var(--color-primary); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                    <h4 style="color: var(--color-secondary); margin-bottom: 0.5rem;">Imprima</h4>
+                    <p style="margin: 0; color: #666; font-size: 0.95rem;">
+                        Você pode imprimir o e-book para leitura física
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Próximos Passos -->
+        <h2 style="color: var(--color-primary); margin: 3rem 0 2rem;">
+            Continue Explorando o Leve Vida
+        </h2>
+        
+        <div class="next-steps">
+            <a href="guias.html" class="next-step-card">
+                <i class="fas fa-map-marked-alt"></i>
+                <h4>Guias Práticos</h4>
+                <p style="color: #666; margin: 0.5rem 0;">
+                    Roteiros detalhados de destinos
+                </p>
+                <span>Ver guias →</span>
+            </a>
+            
+            <a href="artigos.html" class="next-step-card">
+                <i class="fas fa-newspaper"></i>
+                <h4>Artigos do Blog</h4>
+                <p style="color: #666; margin: 0.5rem 0;">
+                    Dicas e estratégias de viagem
+                </p>
+                <span>Ler artigos →</span>
+            </a>
+            
+            <a href="downloads.html" class="next-step-card">
+                <i class="fas fa-download"></i>
+                <h4>Downloads Grátis</h4>
+                <p style="color: #666; margin: 0.5rem 0;">
+                    Checklists e planilhas úteis
+                </p>
+                <span>Baixar →</span>
+            </a>
+        </div>
+        
+        <!-- Suporte -->
+        <div class="support-box">
+            <h3><i class="fas fa-life-ring"></i> Precisa de Ajuda?</h3>
+            <p>
+                Nossa equipe está pronta para ajudar! Entre em contato por qualquer um dos canais abaixo:
+            </p>
+            
+            <div class="contact-buttons">
+                <a href="https://wa.me/5565999777000?text=Olá!%20Comprei%20o%20e-book%20e%20preciso%20de%20ajuda" 
+                   target="_blank" 
+                   class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                
+                <a href="mailto:equipelevevida@gmail.com?subject=Ajuda%20com%20e-book" 
+                   class="contact-btn">
+                    <i class="fas fa-envelope"></i> E-mail
+                </a>
+                
+                <a href="contato.html" class="contact-btn">
+                    <i class="fas fa-comment-dots"></i> Formulário
+                </a>
+            </div>
+            
+            <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+                <strong>Horário de atendimento:</strong> Segunda a Sexta, 9h às 18h | Sábados, 9h às 13h
+            </p>
+        </div>
+        
+        <!-- Redes Sociais -->
+        <div style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <h3 style="color: var(--color-primary); margin-bottom: 1rem;">
+                <i class="fas fa-heart"></i> Siga-nos nas Redes Sociais
+            </h3>
+            <p style="color: #666; margin-bottom: 1.5rem;">
+                Fique por dentro de dicas exclusivas, promoções e novidades!
+            </p>
+            
+            <div class="social-media" style="justify-content: center; font-size: 1.5rem;">
+                <a href="#" class="social-link" title="Instagram" aria-label="Instagram" 
+                   style="width: 60px; height: 60px; font-size: 1.8rem;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" title="Kwai" aria-label="Kwai"
+                   style="width: 60px; height: 60px; font-size: 1.8rem;">
+                    <i class="fas fa-video"></i>
+                </a>
+                <a href="#" class="social-link" title="TikTok" aria-label="TikTok"
+                   style="width: 60px; height: 60px; font-size: 1.8rem;">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="social-link" title="YouTube" aria-label="YouTube"
+                   style="width: 60px; height: 60px; font-size: 1.8rem;">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre o Leve Vida</h3>
+                <p>
+                    Ajudamos você a realizar seus sonhos de viagem sem pesar no bolso. 
+                    Dicas, estratégias e muito conteúdo de qualidade.
+                </p>
+                <div class="social-media">
+                    <a href="#" class="social-link" title="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Kwai" aria-label="Kwai">
+                        <i class="fas fa-video"></i>
+                    </a>
+                    <a href="#" class="social-link" title="TikTok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-link" title="YouTube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="artigos.html">Artigos</a>
+                    <a href="e-book.html">E-book</a>
+                    <a href="guias.html">Guias</a>
+                    <a href="downloads.html">Downloads</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jardim Aclimaação, Cuiabá - MT</p>
+                <p><i class="fas fa-phone"></i> +55 (65) 99977-7000</p>
+                <p><i class="fas fa-envelope"></i> equipelevevida@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Leve Vida - Todos os direitos reservados</p>
+            <p>Voe alto, Viva Leve! ✈️</p>
+        </div>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+    
+    <!-- Confetti Animation on Page Load -->
+    <script>
+        // Simples animação de celebração
+        window.addEventListener('load', function() {
+            console.log('🎉 Compra confirmada com sucesso!');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+{
+  "id": "fortaleza",
+  "titulo": "Fortaleza - Capital do Sol",
+  "subtitulo": "Paraíso do Nordeste Brasileiro",
+  "descricao": "Guia completo da capital cearense! Praias paradisíacas, cultura vibrante, gastronomia imperdível e dicas econômicas para aproveitar o melhor do Nordeste.",
+  "destaque": true,
+  "meta": {
+    "duracao": "5-10 dias",
+    "orcamento": "R$ 2.500",
+    "clima": "25-30°C",
+    "voos": "Voos diretos"
+  },
+  "icone": "fa-umbrella-beach",
+  "cor": "#667eea",
+  "imagem_capa": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1600&h=600&fit=crop",
+  "tags": ["praia", "nordeste", "cultura", "gastronomia"],
+  "secoes": [
+    {
+      "id": "introducao",
+      "tipo": "texto",
+      "titulo": "Bem-vindo a Fortaleza",
+      "icone": "fa-star",
+      "conteudo": "Fortaleza, capital do estado do Ceará, é uma das cidades mais vibrantes e encantadoras do Nordeste brasileiro. Com seu clima tropical durante todo o ano, praias deslumbrantes e cultura rica, a cidade atrai visitantes de todo o mundo em busca de sol, mar e experiências autênticas.",
+      "imagem": "https://images.unsplash.com/photo-1605359068635-26f0c7c98d6d?w=1200&h=400&fit=crop"
+    },
+    {
+      "id": "praias",
+      "tipo": "cards",
+      "titulo": "As Praias Imperdíveis",
+      "icone": "fa-umbrella-beach",
+      "items": [
+        {
+          "titulo": "Praia do Futuro",
+          "emoji": "🌅",
+          "descricao": "Uma das mais famosas e movimentadas de Fortaleza, conhecida por sua orla extensa e ondas fortes. Tradicionais barracas de praia oferecem os melhores frutos do mar da região.",
+          "imagem": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=300&fit=crop",
+          "destaque": ["Barracas típicas", "Forró ao vivo", "Frutos do mar"]
+        },
+        {
+          "titulo": "Praia de Iracema",
+          "emoji": "🎣",
+          "descricao": "Cartão-postal icônico de Fortaleza, carregado de história e cultura. O pôr do sol aqui é considerado um dos mais belos do Brasil.",
+          "imagem": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=300&fit=crop",
+          "destaque": ["Pôr do sol", "Centro Dragão do Mar", "Vida noturna"]
+        },
+        {
+          "titulo": "Praia do Cumbuco",
+          "emoji": "🌊",
+          "descricao": "Localizada a 30km de Fortaleza, é um verdadeiro paraíso tropical. Dunas de até 30 metros de altura e lagoas cristalinas.",
+          "imagem": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&h=300&fit=crop",
+          "destaque": ["Passeio de buggy", "Kitesurf", "Lagoas"]
+        }
+      ]
+    },
+    {
+      "id": "tabela-praias",
+      "tipo": "tabela",
+      "titulo": "Comparativo das Principais Praias",
+      "icone": "fa-table",
+      "colunas": ["Praia", "Distância", "Destaques", "Atividades"],
+      "linhas": [
+        ["Praia do Futuro", "8km", "Barracas típicas, ondas fortes", "Frutos do mar, natação"],
+        ["Praia de Iracema", "2km", "Vida noturna, pôr do sol", "Passeios culturais, fotografia"],
+        ["Praia do Cumbuco", "30km", "Dunas, lagoas, coqueirais", "Buggy, kitesurf, SUP"],
+        ["Praia do Meireles", "5km", "Orla urbanizada, calçadão", "Caminhadas, corridas"],
+        ["Beach Park", "25km", "Parque aquático, resort", "Diversão em família"]
+      ]
+    },
+    {
+      "id": "pontos-turisticos",
+      "tipo": "lista",
+      "titulo": "Principais Pontos Turísticos",
+      "icone": "fa-map-marked-alt",
+      "items": [
+        {
+          "titulo": "Centro Dragão do Mar",
+          "tipo": "Cultural",
+          "descricao": "Um dos mais importantes complexos culturais do Nordeste. Museus, cinemas, teatros, planetário e muito mais.",
+          "dica": "Entrada gratuita no complexo. Horário: Terça a domingo, 9h às 19h"
+        },
+        {
+          "titulo": "Catedral Metropolitana",
+          "tipo": "Religiosa",
+          "descricao": "A maior catedral do Brasil em área construída. Arquitetura neogótica impressionante com vitrais coloridos.",
+          "dica": "Capacidade para 5.000 pessoas. Construção levou 40 anos (1939-1978)"
+        },
+        {
+          "titulo": "Theatro José de Alencar",
+          "tipo": "Cultural/Histórica",
+          "descricao": "Inaugurado em 1910, é uma joia da arquitetura teatral brasileira em estilo art nouveau.",
+          "dica": "Capacidade para 800 pessoas. Jardins bem cuidados"
+        },
+        {
+          "titulo": "Ponte dos Ingleses",
+          "tipo": "Paisagem",
+          "descricao": "Estrutura de ferro sobre o mar na Praia de Iracema. Vista privilegiada para o pôr do sol.",
+          "dica": "Chegue 30 minutos antes do pôr do sol para melhor ângulo"
+        },
+        {
+          "titulo": "Mercado Central",
+          "tipo": "Comércio",
+          "descricao": "Quatro andares com centenas de boxes comercializando artesanato e produtos típicos.",
+          "dica": "Pechinche! Você consegue 10-30% de desconto"
+        }
+      ]
+    },
+    {
+      "id": "gastronomia",
+      "tipo": "gastronomia",
+      "titulo": "O que Comer em Fortaleza",
+      "icone": "fa-utensils",
+      "items": [
+        {
+          "nome": "Caranguejada",
+          "emoji": "🦀",
+          "descricao": "Caranguejos cozidos em caldo temperado. Tradicionalmente consumidos com as mãos.",
+          "onde": "Barracas da Praia do Futuro",
+          "preco": "R$ 60-80/kg",
+          "imagem": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=400&h=250&fit=crop"
+        },
+        {
+          "nome": "Peixe Grelhado",
+          "emoji": "🐟",
+          "descricao": "Peixe do dia grelhado na brasa, servido com arroz, pirão e legumes.",
+          "onde": "Qualquer barraca de praia",
+          "preco": "R$ 50-70",
+          "imagem": "https://images.unsplash.com/photo-1580959375944-0be6410cd7e9?w=400&h=250&fit=crop"
+        },
+        {
+          "nome": "Baião de Dois",
+          "emoji": "🍚",
+          "descricao": "Mistura de arroz, feijão-verde, queijo coalho, nata e temperos.",
+          "onde": "Restaurantes típicos",
+          "preco": "R$ 35-50",
+          "imagem": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=250&fit=crop"
+        },
+        {
+          "nome": "Tapioca",
+          "emoji": "🥞",
+          "descricao": "Feita de goma de mandioca, pode ser doce ou salgada.",
+          "onde": "Feiras e lanchonetes",
+          "preco": "R$ 8-15",
+          "imagem": "https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=400&h=250&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": "orcamento",
+      "tipo": "orcamento",
+      "titulo": "Quanto Custa uma Viagem para Fortaleza?",
+      "icone": "fa-money-bill-wave",
+      "opcoes": [
+        {
+          "nivel": "Econômico",
+          "cor": "#4caf50",
+          "total": "R$ 1.800",
+          "items": [
+            {"item": "Passagem Aérea", "valor": "R$ 400"},
+            {"item": "Hospedagem (7 noites)", "valor": "R$ 560"},
+            {"item": "Alimentação", "valor": "R$ 420"},
+            {"item": "Transporte Local", "valor": "R$ 210"},
+            {"item": "Passeios", "valor": "R$ 150"},
+            {"item": "Extras", "valor": "R$ 60"}
+          ]
+        },
+        {
+          "nivel": "Médio",
+          "cor": "#667eea",
+          "total": "R$ 3.500",
+          "items": [
+            {"item": "Passagem Aérea", "valor": "R$ 700"},
+            {"item": "Hospedagem (7 noites)", "valor": "R$ 1.050"},
+            {"item": "Alimentação", "valor": "R$ 700"},
+            {"item": "Transporte Local", "valor": "R$ 350"},
+            {"item": "Passeios", "valor": "R$ 500"},
+            {"item": "Extras", "valor": "R$ 200"}
+          ]
+        },
+        {
+          "nivel": "Confortável",
+          "cor": "#9c27b0",
+          "total": "R$ 6.000+",
+          "items": [
+            {"item": "Passagem Aérea", "valor": "R$ 1.000"},
+            {"item": "Hospedagem (7 noites)", "valor": "R$ 2.100"},
+            {"item": "Alimentação", "valor": "R$ 1.400"},
+            {"item": "Transporte Local", "valor": "R$ 700"},
+            {"item": "Passeios", "valor": "R$ 800"},
+            {"item": "Extras", "valor": "R$ 500"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dicas",
+      "tipo": "dicas",
+      "titulo": "Dicas Práticas",
+      "icone": "fa-lightbulb",
+      "items": [
+        {
+          "tipo": "info",
+          "titulo": "Melhor Época para Visitar",
+          "icone": "fa-calendar-alt",
+          "conteudo": "Julho a dezembro é o período mais agradável, com menos chuvas e mais dias de sol. Junho e julho coincidem com férias escolares e trazem atmosfera vibrante."
+        },
+        {
+          "tipo": "warning",
+          "titulo": "Segurança",
+          "icone": "fa-shield-alt",
+          "conteudo": "Evite ostentar objetos de valor. Use apps de transporte. Prefira regiões turísticas à noite. Use cofre do hotel para documentos."
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Economia",
+          "icone": "fa-piggy-bank",
+          "conteudo": "Almoce nas barracas de praia (pratos servem 2-3 pessoas). Use transporte público. Compre passagens com antecedência. Viaje na média temporada."
+        }
+      ]
+    }
+  ],
+  "download_materiais": [
+    {
+      "titulo": "Checklist de Viagem",
+      "descricao": "Lista completa do que levar para Fortaleza",
+      "icone": "fa-list-check",
+      "arquivo": "fortaleza-checklist.pdf"
+    },
+    {
+      "titulo": "Mapa Interativo",
+      "descricao": "Principais pontos turísticos e praias",
+      "icone": "fa-map",
+      "arquivo": "fortaleza-mapa.pdf"
+    },
+    {
+      "titulo": "Planilha de Orçamento",
+      "descricao": "Controle seus gastos durante a viagem",
+      "icone": "fa-file-excel",
+      "arquivo": "fortaleza-orcamento.xlsx"
+    }
+  ]
+}

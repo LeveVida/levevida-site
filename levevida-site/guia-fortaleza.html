@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- ============================================
+         META TAGS E CONFIGURAÇÕES BÁSICAS
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Guia completo de viagem para Fortaleza-CE: praias paradisíacas, pontos turísticos, gastronomia, dicas de economia e muito mais!">
+    <meta name="keywords" content="Fortaleza, Ceará, praias, turismo Nordeste, guia de viagem, Beach Park, Cumbuco">
+    <meta name="author" content="Leve Vida">
+    
+    <title>Guia Completo: Fortaleza-CE - Paraíso do Nordeste | Leve Vida</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Estilos específicos para o guia */
+        .guide-header {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%),
+                        url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1600&h=600&fit=crop') center/cover;
+            color: white;
+            padding: 6rem 2rem 4rem;
+            margin-top: 80px;
+            text-align: center;
+        }
+        
+        .guide-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .guide-hero-content h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .guide-hero-content .subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .guide-meta {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .guide-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .guide-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .guide-section {
+            margin: 4rem 0;
+        }
+        
+        .section-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .beach-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .beach-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .beach-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .beach-card-content {
+            padding: 2rem;
+        }
+        
+        .beach-card h3 {
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border-left: 5px solid #4caf50;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 5px solid #ff9800;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #2196f3;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .table-responsive {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        .guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .guide-table thead {
+            background: var(--gradient-primary);
+            color: white;
+        }
+        
+        .guide-table th,
+        .guide-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .guide-table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .activity-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .activity-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+        
+        .activity-item i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .cuisine-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .cuisine-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .cuisine-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .cuisine-content {
+            padding: 1.5rem;
+        }
+        
+        .budget-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .budget-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .budget-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .checklist li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .guide-image {
+                height: 250px;
+            }
+            
+            .beach-card img {
+                height: 200px;
+            }
+            
+            .guide-table th,
+            .guide-table td {
+                padding: 0.7rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================
+         HEADER E NAVEGAÇÃO
+         ============================================ -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" class="logo-text">Leve Vida</a>
+            </div>
+            
+            <!-- Menu de Navegação -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+                    <li><a href="artigos.html" class="nav-link">ARTIGOS</a></li>
+                    <li><a href="e-book.html" class="nav-link">E-BOOK</a></li>
+                    <li><a href="guias.html" class="nav-link active">GUIAS</a></li>
+                    <li><a href="downloads.html" class="nav-link">DOWNLOADS</a></li>
+                    <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Botão Hamburger (Mobile) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ============================================
+         HERO DO GUIA
+         ============================================ -->
+    <section class="guide-header">
+        <div class="guide-hero-content">
+            <h1>🌊 Guia Completo de Fortaleza-CE</h1>
+            <p class="subtitle">Paraíso do Nordeste Brasileiro</p>
+            
+            <div class="guide-meta">
+                <div class="guide-meta-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>5-10 dias</span>
+                </div>
+                <div class="guide-meta-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>R$ 2.500 médio</span>
+                </div>
+                <div class="guide-meta-item">
+                    <i class="fas fa-sun"></i>
+                    <span>25-30°C</span>
+                </div>
+                <div class="guide-meta-item">
+                    <i class="fas fa-plane"></i>
+                    <span>Voos diretos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         CONTEÚDO DO GUIA
+         ============================================ -->
+    <div class="container">
+        
+        <!-- Introdução -->
+        <section class="guide-section">
+            <div class="section-icon">✨</div>
+            <h2 class="section-title">Bem-vindo a Fortaleza: A Capital do Sol do Nordeste</h2>
+            
+            <img src="https://images.unsplash.com/photo-1605359068635-26f0c7c98d6d?w=1200&h=400&fit=crop" 
+                 alt="Vista panorâmica de Fortaleza" 
+                 class="guide-image">
+            
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                Fortaleza, capital do estado do Ceará, é uma das cidades mais vibrantes e encantadoras do 
+                Nordeste brasileiro. Com seu clima tropical durante todo o ano, praias deslumbrantes e cultura 
+                rica, a cidade atrai visitantes de todo o mundo em busca de sol, mar e experiências autênticas.
+            </p>
+            
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                Como a maior cidade do estado do Ceará, Fortaleza combina perfeitamente a agitação urbana com 
+                a tranquilidade litorânea, oferecendo aos visitantes uma experiência completa de férias - desde 
+                a animada vida noturna até momentos de relaxamento em algumas das paisagens naturais mais belas 
+                do Brasil.
+            </p>
+            
+            <div class="info-box">
+                <h3 style="color: #2e7d32; margin-bottom: 1rem;">
+                    <i class="fas fa-info-circle"></i> Destaques de Fortaleza
+                </h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+                        <i class="fas fa-check" style="position: absolute; left: 0; color: #4caf50;"></i>
+                        Extensas áreas de areia e dunas que atingem até 30 metros de altura
+                    </li>
+                    <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+                        <i class="fas fa-check" style="position: absolute; left: 0; color: #4caf50;"></i>
+                        Arquitetura colonial encantadora e preservada
+                    </li>
+                    <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+                        <i class="fas fa-check" style="position: absolute; left: 0; color: #4caf50;"></i>
+                        Culinária rica em frutos do mar frescos
+                    </li>
+                    <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+                        <i class="fas fa-check" style="position: absolute; left: 0; color: #4caf50;"></i>
+                        Povo acolhedor e o famoso humor cearense
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Praias -->
+        <section class="guide-section">
+            <div class="section-icon">🏖️</div>
+            <h2 class="section-title">As Praias Imperdíveis de Fortaleza</h2>
+            
+            <!-- Praia do Futuro -->
+            <div class="beach-card">
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=300&fit=crop" 
+                     alt="Praia do Futuro">
+                <div class="beach-card-content">
+                    <h3>🌅 Praia do Futuro</h3>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        A Praia do Futuro é uma das mais famosas e movimentadas de Fortaleza, conhecida por 
+                        sua orla extensa e ondas fortes. Ao longo de sua extensão, você encontrará as tradicionais 
+                        <strong>barracas de praia</strong> - estruturas que oferecem desde cadeiras e guarda-sóis 
+                        até refeições completas com os melhores frutos do mar da região.
+                    </p>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        A culinária aqui é um espetáculo à parte, com pratos típicos como <strong>caranguejada</strong>, 
+                        peixe grelhado e camarão na manteiga de garrafa. A vibração cultural é palpável, com 
+                        forró pé-de-serra ao vivo e apresentações de artistas locais nos fins de semana.
+                    </p>
+                    
+                    <div class="activity-grid">
+                        <div class="activity-item">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Gastronomia</h4>
+                            <p>Frutos do mar frescos</p>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-music"></i>
+                            <h4>Forró</h4>
+                            <p>Música ao vivo</p>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <h4>Barracas</h4>
+                            <p>Estrutura completa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Praia de Iracema -->
+            <div class="beach-card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=300&fit=crop" 
+                     alt="Praia de Iracema">
+                <div class="beach-card-content">
+                    <h3>🎣 Praia de Iracema</h3>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        A Praia de Iracema é um dos cartões-postais mais icônicos de Fortaleza, carregada de 
+                        história e cultura. Este bairro foi um dos primeiros a se desenvolver na cidade e mantém 
+                        até hoje seu charme característico.
+                    </p>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        O <strong>pôr do sol</strong> aqui é considerado um dos mais belos do Brasil, com o céu 
+                        se pintando em tons alaranjados e avermelhados enquanto o sol mergulha no oceano. O 
+                        <strong>Centro Dragão do Mar de Arte e Cultura</strong>, localizado nas proximidades, 
+                        oferece programação cultural diversificada.
+                    </p>
+                    
+                    <div class="tip-box">
+                        <h4 style="color: #1565c0; margin-bottom: 0.5rem;">
+                            <i class="fas fa-camera"></i> Dica de Fotografia
+                        </h4>
+                        <p style="margin: 0;">
+                            Chegue à Ponte dos Ingleses 30 minutos antes do pôr do sol para garantir o melhor 
+                            ângulo e capturar o momento mágico quando o céu ganha cores vibrantes!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Praia do Cumbuco -->
+            <div class="beach-card">
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&h=300&fit=crop" 
+                     alt="Praia do Cumbuco">
+                <div class="beach-card-content">
+                    <h3>🌊 Praia do Cumbuco</h3>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        Localizada a aproximadamente <strong>30km de Fortaleza</strong>, a Praia do Cumbuco é 
+                        um verdadeiro paraíso tropical que vale a pena visitar. Cercada por coqueiros, lagoas 
+                        cristalinas e imensas dunas de areia fina, Cumbuco oferece uma paisagem deslumbrante.
+                    </p>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        As dunas, que podem atingir até 30 metros de altura, são o palco ideal para a prática 
+                        de <strong>passeios de buggy</strong> - uma experiência emocionante que inclui descidas 
+                        íngremes e banhos refrescantes nas lagoas de águas doces que se formam entre as dunas.
+                    </p>
+                    
+                    <div class="activity-grid">
+                        <div class="activity-item">
+                            <i class="fas fa-wind"></i>
+                            <h4>Kitesurf</h4>
+                            <p>Ventos ideais</p>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-truck-monster"></i>
+                            <h4>Passeio de Buggy</h4>
+                            <p>Aventura nas dunas</p>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-water"></i>
+                            <h4>Lagoas</h4>
+                            <p>Águas cristalinas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tabela Comparativa de Praias -->
+            <h3 style="color: var(--color-primary); margin: 3rem 0 1.5rem;">
+                📊 Comparativo das Principais Praias
+            </h3>
+            
+            <div class="table-responsive">
+                <table class="guide-table">
+                    <thead>
+                        <tr>
+                            <th>Praia</th>
+                            <th>Distância do Centro</th>
+                            <th>Destaques</th>
+                            <th>Atividades Recomendadas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Praia do Futuro</strong></td>
+                            <td>8km</td>
+                            <td>Barracas típicas, ondas fortes</td>
+                            <td>Degustação de frutos do mar, natação, sol</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Praia de Iracema</strong></td>
+                            <td>2km</td>
+                            <td>Vida noturna, pôr do sol, cultura</td>
+                            <td>Passeios culturais, fotografia, jantares</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Praia do Cumbuco</strong></td>
+                            <td>30km</td>
+                            <td>Dunas, lagoas, coqueirais</td>
+                            <td>Passeio de buggy, kitesurf, stand-up paddle</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Praia do Meireles</strong></td>
+                            <td>5km</td>
+                            <td>Orla urbanizada, calçadão</td>
+                            <td>Caminhadas, corridas, compras</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Beach Park</strong></td>
+                            <td>25km</td>
+                            <td>Parque aquático, resort</td>
+                            <td>Diversão em família, toboáguas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="warning-box">
+                <h4 style="color: #e65100; margin-bottom: 0.5rem;">
+                    <i class="fas fa-exclamation-triangle"></i> Atenção
+                </h4>
+                <p style="margin: 0;">
+                    Algumas praias têm ondas fortes e correntezas. Sempre nade em áreas supervisionadas 
+                    por salva-vidas e respeite as bandeiras de sinalização!
+                </p>
+            </div>
+        </section>
+        
+        <!-- Pontos Turísticos -->
+        <section class="guide-section">
+            <div class="section-icon">🗺️</div>
+            <h2 class="section-title">Principais Pontos Turísticos e Atrações</h2>
+            
+            <img src="https://images.unsplash.com/photo-1580837119756-563d608dd119?w=1200&h=400&fit=crop" 
+                 alt="Centro Dragão do Mar" 
+                 class="guide-image">
+            
+            <!-- Centro Dragão do Mar -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                    🌆 Centro Dragão do Mar de Arte e Cultura
+                </h3>
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    Localizado no coração da Praia de Iracema, o Centro Dragão do Mar de Arte e Cultura é 
+                    um dos mais importantes complexos culturais do Nordeste. Batizado em homenagem ao jangadeiro 
+                    e líder abolicionista Francisco José do Nascimento, o "Dragão do Mar", o espaço ocupa uma 
+                    área revitalizada do centro da cidade.
+                </p>
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    O complexo reúne:
+                </p>
+                <ul class="checklist">
+                    <li>Museus (Memorial da Cultura Cearense, Museu de Arte Contemporânea)</li>
+                    <li>Cinemas e teatros</li>
+                    <li>Planetário</li>
+                    <li>Espaços para exposições</li>
+                    <li>Bares e restaurantes</li>
+                    <li>Lojas de artesanato</li>
+                </ul>
+                
+                <div class="info-box" style="margin-top: 1.5rem;">
+                    <p style="margin: 0;">
+                        <strong><i class="fas fa-ticket-alt"></i> Entrada:</strong> Gratuita no complexo. 
+                        Algumas exposições e shows podem ter ingressos pagos.<br>
+                        <strong><i class="fas fa-clock"></i> Horário:</strong> Terça a domingo, 9h às 19h
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Catedral Metropolitana -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                    ⛪ Catedral Metropolitana de Fortaleza
+                </h3>
+                <img src="https://images.unsplash.com/photo-1548625361-6550ada5b3e7?w=1200&h=350&fit=crop" 
+                     alt="Catedral Metropolitana" 
+                     style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    A Catedral Metropolitana de Fortaleza, oficialmente conhecida como <strong>Catedral de 
+                    São José</strong>, é um dos edifícios mais imponentes da cidade e um marco da arquitetura 
+                    religiosa brasileira. Com capacidade para abrigar até <strong>5.000 pessoas</strong>, é a 
+                    maior catedral do Brasil em termos de área construída.
+                </p>
+                <p style="line-height: 1.7;">
+                    Sua arquitetura em estilo <strong>neogótico</strong> impressiona pela grandiosidade e pelos 
+                    detalhes minuciosos. Os vitrais coloridos que adornam as janelas representam cenas bíblicas 
+                    e santos, criando um espetáculo de cores e luzes quando iluminados pelo sol. A catedral 
+                    levou <strong>40 anos</strong> para ser construída (1939-1978).
+                </p>
+            </div>
+            
+            <!-- Theatro José de Alencar -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                    🏛️ Theatro José de Alencar
+                </h3>
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    Inaugurado em <strong>1910</strong>, o Theatro José de Alencar é uma joia da arquitetura 
+                    teatral brasileira. Batizado em homenagem ao grande escritor cearense José de Alencar, o 
+                    teatro surpreende pela beleza de sua estrutura em estilo <strong>art nouveau</strong>.
+                </p>
+                <p style="line-height: 1.7;">
+                    O complexo inclui o edifício principal com sua sala de espetáculos, a praça do teatro com 
+                    jardins bem cuidados, e um anexo moderno que abriga espaços para ensaios e oficinas culturais. 
+                    A sala principal tem capacidade para <strong>800 pessoas</strong> e é decorada com ferragens 
+                    trabalhadas e vitrais coloridos.
+                </p>
+            </div>
+            
+            <!-- Ponte dos Ingleses -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                    🌉 Ponte dos Ingleses
+                </h3>
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=350&fit=crop" 
+                     alt="Ponte dos Ingleses ao pôr do sol" 
+                     style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    Também conhecida como Estoril, a Ponte dos Ingleses é uma estrutura de ferro que se estende 
+                    sobre o mar na Praia de Iracema, oferecendo uma das vistas mais privilegiadas para o pôr do 
+                    sol em Fortaleza.
+                </p>
+                <p style="line-height: 1.7;">
+                    Construída originalmente para servir como ancoradouro de embarque de cargas (principalmente 
+                    algodão), a ponte hoje é um dos pontos mais românticos e frequentados da cidade, especialmente 
+                    no final da tarde.
+                </p>
+            </div>
+            
+            <!-- Mercado Central -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                    🛒 Mercado Central de Fortaleza
+                </h3>
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    Para uma experiência autêntica da cultura cearense, o Mercado Central de Fortaleza é parada 
+                    obrigatória. Instalado em um edifício de <strong>quatro andares</strong> no centro da cidade, 
+                    o mercado reúne centenas de boxes que comercializam os mais variados produtos típicos.
+                </p>
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    <strong>O que encontrar:</strong>
+                </p>
+                <ul class="checklist">
+                    <li>Artesanato regional (rendas, bordados, redes, cerâmicas)</li>
+                    <li>Cachaças artesanais</li>
+                    <li>Rapaduras e doces típicos</li>
+                    <li>Queijos e especiarias</li>
+                    <li>Roupas e acessórios</li>
+                </ul>
+                
+                <div class="tip-box" style="margin-top: 1.5rem;">
+                    <h4 style="color: #1565c0; margin-bottom: 0.5rem;">
+                        <i class="fas fa-hand-holding-usd"></i> Dica de Economia
+                    </h4>
+                    <p style="margin: 0;">
+                        A negociação é comum e esperada no Mercado Central. Não hesite em pechinchar pelos 
+                        preços - geralmente você consegue de 10% a 30% de desconto!
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Tabela de Atrações -->
+            <h3 style="color: var(--color-primary); margin: 3rem 0 1.5rem;">
+                📊 Resumo das Principais Atrações
+            </h3>
+            
+            <div class="table-responsive">
+                <table class="guide-table">
+                    <thead>
+                        <tr>
+                            <th>Atração</th>
+                            <th>Tipo</th>
+                            <th>Localização</th>
+                            <th>Destaque</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Centro Dragão do Mar</strong></td>
+                            <td>Cultural</td>
+                            <td>Praia de Iracema</td>
+                            <td>Museus, cinemas, teatros e programação diversa</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Catedral Metropolitana</strong></td>
+                            <td>Religiosa</td>
+                            <td>Centro</td>
+                            <td>Arquitetura neogótica, vitrais e grandiosidade</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Theatro José de Alencar</strong></td>
+                            <td>Cultural/Histórica</td>
+                            <td>Centro</td>
+                            <td>Arquitetura art nouveau, jardins e história</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ponte dos Ingleses</strong></td>
+                            <td>Paisagem</td>
+                            <td>Praia de Iracema</td>
+                            <td>Pôr do sol e vista para o mar</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mercado Central</strong></td>
+                            <td>Comércio</td>
+                            <td>Centro</td>
+                            <td>Artesanato e produtos regionais</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Beach Park</strong></td>
+                            <td>Lazer</td>
+                            <td>Porto das Dunas</td>
+                            <td>Maior parque aquático da América Latina</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Gastronomia -->
+        <section class="guide-section">
+            <div class="section-icon">🍽️</div>
+            <h2 class="section-title">O que Comer em Fortaleza</h2>
+            
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                A culinária cearense é um dos grandes highlights da viagem a Fortaleza. A cidade oferece uma 
+                explosão de sabores, especialmente quando o assunto é frutos do mar fresquíssimos!
+            </p>
+            
+            <div class="cuisine-list">
+                <!-- Caranguejada -->
+                <div class="cuisine-item">
+                    <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=400&h=250&fit=crop" 
+                         alt="Caranguejada">
+                    <div class="cuisine-content">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🦀 Caranguejada</h4>
+                        <p>
+                            Caranguejos cozidos em um caldo temperado com especiarias. Tradicionalmente 
+                            consumidos com as mãos nas barracas da Praia do Futuro.
+                        </p>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">
+                            <strong>Onde:</strong> Barracas da Praia do Futuro<br>
+                            <strong>Preço médio:</strong> R$ 60-80/kg
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Peixe Grelhado -->
+                <div class="cuisine-item">
+                    <img src="https://images.unsplash.com/photo-1580959375944-0be6410cd7e9?w=400&h=250&fit=crop" 
+                         alt="Peixe grelhado">
+                    <div class="cuisine-content">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🐟 Peixe Fresco</h4>
+                        <p>
+                            Peixe do dia grelhado na brasa, servido com arroz, pirão e legumes. Simples, 
+                            saudável e delicioso!
+                        </p>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">
+                            <strong>Onde:</strong> Qualquer barraca de praia<br>
+                            <strong>Preço médio:</strong> R$ 50-70
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Baião de Dois -->
+                <div class="cuisine-item">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=250&fit=crop" 
+                         alt="Baião de dois">
+                    <div class="cuisine-content">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🍚 Baião de Dois</h4>
+                        <p>
+                            Mistura irresistível de arroz, feijão-verde, queijo coalho, nata e diversos 
+                            temperos. Prato típico e muito saboroso!
+                        </p>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">
+                            <strong>Onde:</strong> Restaurantes típicos<br>
+                            <strong>Preço médio:</strong> R$ 35-50
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Tapioca -->
+                <div class="cuisine-item">
+                    <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=400&h=250&fit=crop" 
+                         alt="Tapioca">
+                    <div class="cuisine-content">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🥞 Tapioca</h4>
+                        <p>
+                            Iguaria feita de goma de mandioca, pode ser doce ou salgada. Perfeita para 
+                            café da manhã ou lanche!
+                        </p>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">
+                            <strong>Onde:</strong> Feiras e lanchonetes<br>
+                            <strong>Preço médio:</strong> R$ 8-15
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Caju -->
+                <div class="cuisine-item">
+                    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400&h=250&fit=crop" 
+                         alt="Suco de caju">
+                    <div class="cuisine-content">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🍹 Caju</h4>
+                        <p>
+                            Experimente o caju in natura, suco gelado, cajuína (bebida típica) e a famosa 
+                            castanha de caju torrada!
+                        </p>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">
+                            <strong>Onde:</strong> Mercados e feiras<br>
+                            <strong>Preço médio:</strong> R$ 5-10
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Rapadura -->
+                <div class="cuisine-item">
+                    <img src="https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=400&h=250&fit=crop" 
+                         alt="Rapadura">
+                    <div class="cuisine-content">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🍬 Rapadura</h4>
+                        <p>
+                            Doce tradicional à base de caldo de cana condensado. Experimente os diversos 
+                            sabores: coco, amendoim, castanha!
+                        </p>
+                        <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">
+                            <strong>Onde:</strong> Mercado Central<br>
+                            <strong>Preço médio:</strong> R$ 3-8
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <h4 style="color: #1565c0; margin-bottom: 0.5rem;">
+                    <i class="fas fa-lightbulb"></i> Dica Gastronômica
+                </h4>
+                <p style="margin: 0;">
+                    Para economizar, almoce nas barracas de praia onde os pratos servem bem 2-3 pessoas! 
+                    Os preços são mais em conta que os restaurantes da orla urbanizada.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Dicas Práticas -->
+        <section class="guide-section">
+            <div class="section-icon">💡</div>
+            <h2 class="section-title">Dicas Práticas para seu Roteiro de Viagem</h2>
+            
+            <!-- Melhor Época -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                    📅 Melhor Época para Visitar
+                </h3>
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    Fortaleza possui um <strong>clima quente durante todo o ano</strong>, com temperaturas 
+                    médias variando entre 25°C e 30°C. O período de <strong>julho a dezembro</strong> é 
+                    geralmente considerado o mais agradável para visitar, com menos chuvas e mais dias de sol.
+                </p>
+                
+                <div class="activity-grid">
+                    <div class="activity-item">
+                        <i class="fas fa-sun"></i>
+                        <h4>Alta Temporada</h4>
+                        <p>Julho e Janeiro</p>
+                        <small style="color: #666;">Mais caro, mais gente</small>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-cloud-sun"></i>
+                        <h4>Média Temporada</h4>
+                        <p>Ago-Dez e Fev-Jun</p>
+                        <small style="color: #666;">Melhor custo-benefício</small>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-cloud-rain"></i>
+                        <h4>Chuvas</h4>
+                        <p>Fev-Mai</p>
+                        <small style="color: #666;">Chuvas rápidas</small>
+                    </div>
+                </div>
+                
+                <div class="info-box" style="margin-top: 1.5rem;">
+                    <p style="margin: 0;">
+                        <strong><i class="fas fa-calendar-check"></i> Festas e Eventos:</strong><br>
+                        • <strong>Réveillon:</strong> Grande festa na orla (Dez/Jan)<br>
+                        • <strong>Carnaval:</strong> Blocos e festas (Fev/Mar)<br>
+                        • <strong>Fortal:</strong> Maior evento de forró fora de época (Jul)
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Como se Locomover -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                    🚗 Como Se Locomover
+                </h3>
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    Fortaleza oferece diversas opções de transporte:
+                </p>
+                
+                <div class="table-responsive">
+                    <table class="guide-table">
+                        <thead>
+                            <tr>
+                                <th>Transporte</th>
+                                <th>Vantagens</th>
+                                <th>Desvantagens</th>
+                                <th>Custo Médio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Ônibus</strong></td>
+                                <td>Econômico, ampla cobertura</td>
+                                <td>Mais demorado, lotado em horários de pico</td>
+                                <td>R$ 4-5/viagem</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Uber/99</strong></td>
+                                <td>Confortável, seguro, prático</td>
+                                <td>Mais caro que ônibus</td>
+                                <td>R$ 15-30 (trajetos curtos)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Táxi</strong></td>
+                                <td>Disponível, conhecem bem a cidade</td>
+                                <td>Mais caro que apps</td>
+                                <td>R$ 20-40 (trajetos curtos)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Carro Alugado</strong></td>
+                                <td>Liberdade total, explore praias distantes</td>
+                                <td>Trânsito, estacionamento, custo alto</td>
+                                <td>R$ 100-150/dia</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Passeios Organizados</strong></td>
+                                <td>Tudo incluído, guia especializado</td>
+                                <td>Menos flexibilidade</td>
+                                <td>R$ 80-200/passeio</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="tip-box" style="margin-top: 1.5rem;">
+                    <h4 style="color: #1565c0; margin-bottom: 0.5rem;">
+                        <i class="fas fa-car"></i> Dica de Transporte
+                    </h4>
+                    <p style="margin: 0;">
+                        Para visitar Cumbuco, Beach Park e outras praias, contrate um passeio de agência 
+                        ou alugue carro. O transporte público para essas áreas é limitado e demorado.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Onde Ficar -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                    🏨 Onde Ficar em Fortaleza
+                </h3>
+                <p style="line-height: 1.7; margin-bottom: 1rem;">
+                    A escolha da hospedagem depende do seu perfil e orçamento:
+                </p>
+                
+                <div class="budget-card">
+                    <div class="budget-header">
+                        <h4 style="color: var(--color-primary); margin: 0;">💎 Praia do Meireles</h4>
+                        <span class="budget-price">R$ 200-500/noite</span>
+                    </div>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        Bairro nobre com hotéis luxuosos, ótima infraestrutura e vista privilegiada para o mar. 
+                        Ideal para quem busca conforto e está disposto a pagar mais.
+                    </p>
+                    <ul class="checklist">
+                        <li>Hotéis 4 e 5 estrelas</li>
+                        <li>Restaurantes sofisticados</li>
+                        <li>Próximo a shopping centers</li>
+                        <li>Calçadão para caminhadas</li>
+                    </ul>
+                </div>
+                
+                <div class="budget-card">
+                    <div class="budget-header">
+                        <h4 style="color: var(--color-primary); margin: 0;">🎉 Praia de Iracema</h4>
+                        <span class="budget-price">R$ 80-200/noite</span>
+                    </div>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        Bairro boêmio com vida noturna agitada. Atrai público jovem e mochileiros. 
+                        Ótimas opções de hostels e pousadas econômicas.
+                    </p>
+                    <ul class="checklist">
+                        <li>Hostels e pousadas</li>
+                        <li>Bares e restaurantes</li>
+                        <li>Centro Dragão do Mar próximo</li>
+                        <li>Vida noturna animada</li>
+                    </ul>
+                </div>
+                
+                <div class="budget-card">
+                    <div class="budget-header">
+                        <h4 style="color: var(--color-primary); margin: 0;">🏖️ Praia do Futuro</h4>
+                        <span class="budget-price">R$ 150-400/noite</span>
+                    </div>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        Mix de pousadas charmosas e resorts all-inclusive. Ideal para quem quer ficar próximo 
+                        às famosas barracas de praia.
+                    </p>
+                    <ul class="checklist">
+                        <li>Pousadas boutique</li>
+                        <li>Resorts all-inclusive</li>
+                        <li>Próximo às barracas</li>
+                        <li>Ambiente mais tranquilo</li>
+                    </ul>
+                </div>
+                
+                <div class="budget-card">
+                    <div class="budget-header">
+                        <h4 style="color: var(--color-primary); margin: 0;">👨‍👩‍👧 Mucuripe</h4>
+                        <span class="budget-price">R$ 100-250/noite</span>
+                    </div>
+                    <p style="line-height: 1.7; margin-bottom: 1rem;">
+                        Bairro residencial mais tranquilo, ideal para famílias. Bom acesso a restaurantes 
+                        e comércio local.
+                    </p>
+                    <ul class="checklist">
+                        <li>Apartamentos e pousadas</li>
+                        <li>Ambiente familiar</li>
+                        <li>Boa infraestrutura</li>
+                        <li>Mais econômico</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Orçamento -->
+        <section class="guide-section">
+            <div class="section-icon">💰</div>
+            <h2 class="section-title">Quanto Custa uma Viagem para Fortaleza?</h2>
+            
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                O custo da viagem varia bastante dependendo do seu estilo e das escolhas que fizer. 
+                Aqui está um guia estimado para 7 dias:
+            </p>
+            
+            <div class="budget-card">
+                <div class="budget-header">
+                    <h4 style="color: #4caf50; margin: 0;">💚 Orçamento Econômico</h4>
+                    <span class="budget-price" style="color: #4caf50;">R$ 1.800</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="guide-table">
+                        <tbody>
+                            <tr>
+                                <td><strong>Passagem Aérea</strong></td>
+                                <td>R$ 400 (promoção, ida e volta)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hospedagem</strong></td>
+                                <td>R$ 560 (hostel, R$ 80/noite x 7)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Alimentação</strong></td>
+                                <td>R$ 420 (R$ 60/dia x 7)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transporte Local</strong></td>
+                                <td>R$ 210 (ônibus e apps)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Passeios</strong></td>
+                                <td>R$ 150 (1-2 passeios básicos)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Extras</strong></td>
+                                <td>R$ 60 (lembranças, emergências)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="budget-card">
+                <div class="budget-header">
+                    <h4 style="color: var(--color-primary); margin: 0;">💙 Orçamento Médio</h4>
+                    <span class="budget-price">R$ 3.500</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="guide-table">
+                        <tbody>
+                            <tr>
+                                <td><strong>Passagem Aérea</strong></td>
+                                <td>R$ 700 (preço regular)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hospedagem</strong></td>
+                                <td>R$ 1.050 (pousada, R$ 150/noite x 7)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Alimentação</strong></td>
+                                <td>R$ 700 (R$ 100/dia x 7)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transporte Local</strong></td>
+                                <td>R$ 350 (apps e táxis)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Passeios</strong></td>
+                                <td>R$ 500 (Beach Park + passeios)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Extras</strong></td>
+                                <td>R$ 200 (compras e imprevistos)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="budget-card">
+                <div class="budget-header">
+                    <h4 style="color: #9c27b0; margin: 0;">💜 Orçamento Confortável</h4>
+                    <span class="budget-price" style="color: #9c27b0;">R$ 6.000+</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="guide-table">
+                        <tbody>
+                            <tr>
+                                <td><strong>Passagem Aérea</strong></td>
+                                <td>R$ 1.000 (executiva ou flexível)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hospedagem</strong></td>
+                                <td>R$ 2.100 (hotel 4-5★, R$ 300/noite x 7)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Alimentação</strong></td>
+                                <td>R$ 1.400 (R$ 200/dia x 7)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transporte Local</strong></td>
+                                <td>R$ 700 (carro alugado + apps)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Passeios</strong></td>
+                                <td>R$ 800 (todos os principais)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Extras</strong></td>
+                                <td>R$ 500 (compras e mimos)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4 style="color: #2e7d32; margin-bottom: 0.5rem;">
+                    <i class="fas fa-piggy-bank"></i> Dicas para Economizar
+                </h4>
+                <ul style="margin: 0; padding-left: 1.5rem;">
+                    <li>Compre passagens com antecedência e fique atento a promoções</li>
+                    <li>Viaje na média temporada (evite janeiro e julho)</li>
+                    <li>Almoce nas barracas de praia (porções grandes e preços justos)</li>
+                    <li>Use transporte público ou apps de carona compartilhada</li>
+                    <li>Muitas atrações são gratuitas (praias, Centro Dragão do Mar, pôr do sol)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Roteiro Sugerido -->
+        <section class="guide-section">
+            <div class="section-icon">📆</div>
+            <h2 class="section-title">Roteiro Sugerido: 7 Dias em Fortaleza</h2>
+            
+            <div class="card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--color-primary);">
+                <h3 style="color: var(--color-primary);">📍 Dia 1: Chegada e Adaptação</h3>
+                <ul class="checklist">
+                    <li>Check-in no hotel</li>
+                    <li>Almoço na Praia de Iracema</li>
+                    <li>Caminhada pelo calçadão</li>
+                    <li>Pôr do sol na Ponte dos Ingleses</li>
+                    <li>Jantar no Centro Dragão do Mar</li>
+                </ul>
+            </div>
+            
+            <div class="card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--color-primary);">
+                <h3 style="color: var(--color-primary);">📍 Dia 2: Praias Urbanas</h3>
+                <ul class="checklist">
+                    <li>Café da manhã</li>
+                    <li>Praia do Futuro (dia inteiro)</li>
+                    <li>Almoço em barraca famosa (Chico do Caranguejo, Crocobeach)</li>
+                    <li>Aproveite forró ao vivo</li>
+                    <li>Retorno ao hotel</li>
+                </ul>
+            </div>
+            
+            <div class="card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--color-primary);">
+                <h3 style="color: var(--color-primary);">📍 Dia 3: Beach Park</h3>
+                <ul class="checklist">
+                    <li>Saída cedo para Porto das Dunas</li>
+                    <li>Beach Park (dia inteiro)</li>
+                    <li>Toboáguas e atrações</li>
+                    <li>Almoço no parque</li>
+                    <li>Retorno à noite</li>
+                </ul>
+            </div>
+            
+            <div class="card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--color-primary);">
+                <h3 style="color: var(--color-primary);">📍 Dia 4: Cumbuco</h3>
+                <ul class="checklist">
+                    <li>Passeio de buggy pelas dunas</li>
+                    <li>Lagoas cristalinas</li>
+                    <li>Almoço na praia</li>
+                    <li>Esquibunda nas dunas</li>
+                    <li>Retorno ao final da tarde</li>
+                </ul>
+            </div>
+            
+            <div class="card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--color-primary);">
+                <h3 style="color: var(--color-primary);">📍 Dia 5: Centro Histórico e Cultura</h3>
+                <ul class="checklist">
+                    <li>Catedral Metropolitana</li>
+                    <li>Theatro José de Alencar</li>
+                    <li>Almoço no Centro</li>
+                    <li>Mercado Central (compras)</li>
+                    <li>Centro Dragão do Mar (museus)</li>
+                    <li>Jantar em restaurante típico</li>
+                </ul>
+            </div>
+            
+            <div class="card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--color-primary);">
+                <h3 style="color: var(--color-primary);">📍 Dia 6: Praia Vizinha</h3>
+                <ul class="checklist">
+                    <li>Bate-volta para Canoa Quebrada ou Jericoacoara</li>
+                    <li>Passeio o dia todo</li>
+                    <li>Almoço local</li>
+                    <li>Explore a vila</li>
+                    <li>Retorno à noite</li>
+                </ul>
+            </div>
+            
+            <div class="card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--color-primary);">
+                <h3 style="color: var(--color-primary);">📍 Dia 7: Relaxamento e Despedida</h3>
+                <ul class="checklist">
+                    <li>Manhã livre na Praia do Meireles</li>
+                    <li>Última compra de lembranças</li>
+                    <li>Almoço de despedida</li>
+                    <li>Check-out</li>
+                    <li>Transfer para o aeroporto</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Informações Finais -->
+        <section class="guide-section">
+            <div class="section-icon">⚠️</div>
+            <h2 class="section-title">Informações Importantes</h2>
+            
+            <div class="warning-box">
+                <h4 style="color: #e65100; margin-bottom: 1rem;">
+                    <i class="fas fa-shield-alt"></i> Segurança
+                </h4>
+                <ul style="margin: 0; padding-left: 1.5rem;">
+                    <li>Evite ostentar objetos de valor</li>
+                    <li>Use cofre do hotel para documentos</li>
+                    <li>Prefira regiões turísticas à noite</li>
+                    <li>Use apps de transporte em vez de táxis na rua</li>
+                    <li>Atenção com golpes de "venda de passeios" na praia</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h4 style="color: #2e7d32; margin-bottom: 1rem;">
+                    <i class="fas fa-medkit"></i> Saúde
+                </h4>
+                <ul style="margin: 0; padding-left: 1.5rem;">
+                    <li>Use protetor solar (FPS 50+) constantemente</li>
+                    <li>Hidrate-se muito bem (o sol é forte!)</li>
+                    <li>Cuidado com o excesso de frutos do mar</li>
+                    <li>Vacinas em dia (não há obrigatoriedade específica)</li>
+                    <li>Leve repelente para mosquitos</li>
+                </ul>
+            </div>
+            
+            <div class="tip-box">
+                <h4 style="color: #1565c0; margin-bottom: 1rem;">
+                    <i class="fas fa-lightbulb"></i> Dicas Extras
+                </h4>
+                <ul style="margin: 0; padding-left: 1.5rem;">
+                    <li>Leve roupas leves, chapéu e óculos de sol</li>
+                    <li>Câmera/celular à prova d'água para fotos nas lagoas</li>
+                    <li>Dinheiro em espécie para barracas de praia</li>
+                    <li>Aprenda algumas palavras do "cearensês"</li>
+                    <li>Baixe apps de transporte antes da viagem</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section class="guide-section" style="text-align: center; background: var(--gradient-primary); padding: 4rem 2rem; border-radius: 20px; color: white;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">
+                ✈️ Pronto para Conhecer Fortaleza?
+            </h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95;">
+                Comece a planejar sua viagem agora com nosso E-book completo!
+            </p>
+            <a href="e-book.html" class="btn btn-large" style="background: white; color: var(--color-primary); display: inline-block;">
+                <i class="fas fa-book"></i> Ver E-book Completo
+            </a>
+            
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                    Gostou deste guia? Compartilhe com seus amigos!
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#" class="btn btn-secondary" style="background: rgba(255,255,255,0.2); border: none;">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="#" class="btn btn-secondary" style="background: rgba(255,255,255,0.2); border: none;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="#" class="btn btn-secondary" style="background: rgba(255,255,255,0.2); border: none;">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Sobre -->
+            <div class="footer-section">
+                <h3>Sobre o Leve Vida</h3>
+                <p>
+                    Ajudamos você a realizar seus sonhos de viagem sem pesar no bolso. 
+                    Dicas, estratégias e muito conteúdo de qualidade.
+                </p>
+                <div class="social-media">
+                    <a href="#" class="social-link" title="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Kwai" aria-label="Kwai">
+                        <i class="fas fa-video"></i>
+                    </a>
+                    <a href="#" class="social-link" title="TikTok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-link" title="YouTube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Links Rápidos -->
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="artigos.html">Artigos</a>
+                    <a href="e-book.html">E-book</a>
+                    <a href="guias.html">Guias</a>
+                    <a href="downloads.html">Downloads</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+            </div>
+            
+            <!-- Contato -->
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jardim Aclimaação, Cuiabá - MT</p>
+                <p><i class="fas fa-phone"></i> +55 (65) 99977-7000</p>
+                <p><i class="fas fa-envelope"></i> equipelevevida@gmail.com</p>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Leve Vida - Todos os direitos reservados</p>
+            <p>Voe alto, Viva Leve! ✈️</p>
+        </div>
+    </footer>
+    
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
